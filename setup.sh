@@ -11,3 +11,6 @@ sudo snap install certbot --classic;
 sudo ln -s /snap/bin/certbot /usr/bin/certbot;
 sudo certbot --apache;
 sudo rm /var/www/html/index.html
+
+#copy pictures over to /var/www/html
+#start apache with sudo systemctl start apache2
