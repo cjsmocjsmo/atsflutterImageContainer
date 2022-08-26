@@ -12,5 +12,13 @@ sudo ln -s /snap/bin/certbot /usr/bin/certbot;
 sudo certbot --apache;
 sudo rm /var/www/html/index.html
 
+sudo a2enmod headers
+
+#thin put this in the main config file in /var/www/html directive
+Header set Access-Control-Allow-Origin "*"
+
 #copy pictures over to /var/www/html
-#start apache with sudo systemctl start apache2
+
+#start apache with 
+sudo apache2 -t
+sudo systemctl start apache2
